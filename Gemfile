@@ -79,6 +79,10 @@ gem 'daemons'
 
 gem 'mongoid_rails_migrations', git: 'https://github.com/adacosta/mongoid_rails_migrations.git', branch: 'master'
 
+# Cypress doesn't directly depend on nokogiri, but several of Cypress's dependencies do.
+# This is here to force version 1.6.8, because bundler was resolving it to 1.6.8.1, which has security vulnerabilities
+gem 'nokogiri', '1.6.8'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
